@@ -1,0 +1,112 @@
+[
+    {
+        "title": "Glyph",
+        "tagline": "Semantic Font Search",
+        "description": "A platform for searching for fonts by their semantic meaning.",
+        "skills": ["Custom Model", "Machine Learning","CLIP","LLMs", "Fine Tuning", "NextJS", "NodeJS", "Supabase", "SQL", "Full-Stack", "Product Design", "Web Sockets"],
+        "image": "/projectThumbnails/GLYPH.png",
+        "featured": true,
+        "highlighted": true,
+        "highlightText": "Highlight Project",
+        "searchTerms": [
+          "font", "fonts", "search", "searching", "semantic", "meaning", "meaningful", "meaningful search", "meaningful searching", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine", "meaningful search engine"]
+        ,
+        "collaborators": [
+        { "name": "Ali Hosseini (me)", "jobTitle": "Fullstack Engineer" },
+          { "name": "Leo Zhu", "jobTitle": "Machine Learning Engineer" }
+        ],
+        "projectLink": "https://glyph.alihosseini.ca"
+    },
+  {
+    "title": "PlaySync",
+    "tagline": "League Management",
+    "description": "A platform for managing leagues, matches, and player statistics.",
+    "skills": ["ReactJS", "NodeJS", "Strapi", "SQL", "Full-Stack", "Product Design", "Web Sockets"],
+    "image": "/projectThumbnails/PLAYSYNC.png",
+    "featured": true,
+    "highlighted": false,
+    "highlightText": "Popular",
+    "searchTerms": [
+      "league", "leagues", "management", "manager", "sports", "tournament", "tournaments", "match", "matches", "player", "players", "stat", "stats", "statistics", "React", "ReactJS", "react.js", "Node", "NodeJS", "node.js", "Strapi", "strapi.js", "SQL", "database", "db", "full stack", "full-stack", "fullstack", "product design", "design", "web sockets", "websocket", "websockets", "real-time", "realtime", "admin", "dashboard", "team", "teams", "score", "scores", "schedule", "scheduling", "fixture", "fixtures", "competition", "organizer", "organize", "sports tech", "sports management", "club", "clubs", "coach", "coaching", "athlete", "athletes"
+    ],
+    "collaborators": [
+    { "name": "Ali Hosseini (me)", "jobTitle": "Project Director & Engineer" },
+      { "name": "Aryan Singh", "jobTitle": "Fullstack Engineer" }
+    ]
+  },{
+    "title": "Nava",
+    "tagline": "Persian Modal Tuner",
+    "description": "A mobile app for tuning Persian musical instruments with a modern UI.",
+    "skills": ["Expo", "React Native", "UX/UI design", "NodeJS", "End2End", "Full-Stack", "SQL"],
+    "image": "/projectThumbnails/NAVA.png",
+    "featured": true,
+    "searchTerms": [
+      "music", "musical", "tuner", "tune", "persian", "iranian", "modal", "maqam", "instrument", "instruments", "mobile", "app", "application", "React Native", "reactnative", "react native", "expo", "expo.io", "UX", "UI", "ux/ui", "user experience", "user interface", "design", "Node", "NodeJS", "node.js", "full stack", "full-stack", "fullstack", "end2end", "end-to-end", "sql", "database", "db", "sound", "audio", "santur", "setar", "tar", "daf", "oud", "kamancheh", "tombak", "music tech", "musician", "musicians", "instrument tuner", "microtonal", "scale", "scales", "intonation", "pitch", "frequency", "traditional", "folk", "ethnic"
+    ],
+    "collaborators": [
+        { "name": "Ali Hosseini (me)", "jobTitle": "Frontend Engineer" },
+        { "name": "Danial Khatoonabadi", "jobTitle": "Backend Developer" }
+    ]
+  },
+  {
+    "title": "GutSense",
+    "tagline": "Gut Health AI",
+    "description": "AI-powered platform for gut health analysis and recommendations.",
+    "skills": ["LLM Fine Tuning", "Few Shot Prompting", "NodeJS", "ReactJS", "REST API", "UX/UI Design", "AI", "LMS", "Machine Learning"],
+    "image": "/projectThumbnails/GUTSENSE.png",
+    "featured": true,
+    "searchTerms": [
+      "AI", "artificial intelligence", "gut health", "gut", "health", "wellness", "digestive", "digestive health", "nutrition", "recommendation", "recommendations", "analysis", "analytics", "LLM", "large language model", "fine tuning", "finetune", "fine-tune", "few shot", "few-shot", "prompt", "prompting", "prompt engineering", "Node", "NodeJS", "node.js", "React", "ReactJS", "react.js", "REST API", "api", "restful", "UX", "UI", "ux/ui", "user experience", "user interface", "design", "LMS", "learning management system", "machine learning", "ml", "platform", "medical", "medicine", "healthcare", "personalized", "personalisation", "personalization", "microbiome", "microbiota", "diet", "dietary", "symptom", "symptoms", "treatment", "therapy", "coach", "coaching", "data science", "data analysis"
+    ],
+    "collaborators": []
+  },
+  {
+    "title": "PRIO",
+    "tagline": "Easy Task Management",
+    "description": "A simple and effective task management app for individuals and teams.",
+    "skills": ["Javascript", "ReactJS", "SQL", "REST API", "UX/UI Design", "NodeJS", "Web Sockets", "Full-Stack", "Product Design"],
+    "image": "/projectThumbnails/PRIO.png",
+    "featured": false,
+    "searchTerms": [
+      "task", "tasks", "management", "manager", "todo", "to-do", "to do", "productivity", "team", "teams", "individual", "personal", "React", "ReactJS", "react.js", "Node", "NodeJS", "node.js", "SQL", "database", "db", "web app", "webapp", "real-time", "realtime", "web sockets", "websocket", "websockets", "full stack", "full-stack", "fullstack", "product design", "design", "UX", "UI", "ux/ui", "user experience", "user interface", "REST API", "api", "restful", "organize", "organizer", "schedule", "planner", "planning", "kanban", "board", "list", "lists", "reminder", "reminders", "note", "notes"
+    ],
+    "collaborators": []
+  },
+  {
+    "title": "ORDR",
+    "tagline": "Restaurant Management",
+    "description": "A comprehensive solution for restaurant order and staff management.",
+    "skills": ["Javascript", "ReactJS", "SQL", "REST API", "UX/UI Design", "NodeJS", "Web Sockets", "Full-Stack", "Product Design"],
+    "image": "/projectThumbnails/ORDR.png",
+    "featured": true,
+    "searchTerms": [
+      "restaurant", "restaurants", "order", "orders", "ordering", "management", "manager", "staff", "employee", "employees", "menu", "menus", "POS", "point of sale", "React", "ReactJS", "react.js", "Node", "NodeJS", "node.js", "SQL", "database", "db", "web app", "webapp", "real-time", "realtime", "web sockets", "websocket", "websockets", "full stack", "full-stack", "fullstack", "product design", "design", "UX", "UI", "ux/ui", "user experience", "user interface", "REST API", "api", "restful", "kitchen", "table", "tables", "reservation", "reservations", "food", "foods", "service", "services", "admin", "dashboard", "waiter", "waitstaff", "chef", "cooking", "dining", "dine-in", "takeout", "delivery"
+    ],
+    "collaborators": []
+  },
+  {
+    "title": "Golden Goal Construction LTD",
+    "tagline": "",
+    "description": "Corporate website for a construction company, featuring portfolio and contact forms.",
+    "skills": ["Website Development", "NextJS", "TypeScript", "NodeJS", "Web Design"],
+    "image": "/projectThumbnails/GGC.png",
+    "featured": false,
+    "searchTerms": [
+      "construction", "builder", "builders", "company", "firm", "website", "web site", "web development", "webdev", "portfolio", "contact", "contact form", "NextJS", "next.js", "next js", "TypeScript", "typescript", "ts", "Node", "NodeJS", "node.js", "web design", "design", "corporate", "landing page", "landing", "services", "projects", "architecture", "architect", "business", "contractor", "contractors", "engineering", "engineer", "property", "real estate", "gallery", "showcase", "about us", "about", "team"
+    ],
+    "collaborators": []
+  },
+  {
+    "title": "S.E.E.",
+    "tagline": "Tutoring Manager",
+    "description": "A platform for managing tutoring sessions, schedules, and student progress.",
+    "skills": ["NextJS", "TypeScript", "NodeJS", "Drizzle", "Server Side Functions", "Product Design"],
+    "image": "/projectThumbnails/SEE.png",
+    "featured": false,
+    "searchTerms": [
+      "tutoring", "tutor", "tutors", "education", "manager", "management", "sessions", "session", "schedule", "scheduling", "student", "students", "progress", "NextJS", "next.js", "next js", "TypeScript", "typescript", "ts", "Node", "NodeJS", "node.js", "Drizzle", "server side", "server-side", "server functions", "product design", "design", "learning", "teacher", "teachers", "class", "classes", "dashboard", "admin", "lesson", "lessons", "academic", "academics", "school", "schools", "course", "courses", "education tech", "edtech"
+    ],
+    "collaborators": []
+  }
+  
+] 

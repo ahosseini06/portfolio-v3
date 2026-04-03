@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.name {
+  font-size: 3.4rem;
+  font-weight: 200;
+  white-space: nowrap;
+  letter-spacing: -0.04em;
+}
+
+.divider {
+  display: block;
+  width: 1px;
+  align-self: stretch;
+  margin: 0.8rem 0;
+  background-color: var(--border);
+}
+
+.desc {
+  font-size: 1.15rem;
+  font-weight: 100;
+  color: var(--secondary);
+  line-height: 1.5;
+  flex: 1;
+}

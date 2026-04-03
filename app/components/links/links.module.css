@@ -1,0 +1,49 @@
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px solid var(--border);
+  padding: 0.625rem 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: var(--secondary);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.link:hover {
+  color: var(--primary);
+}
+
+.link.linkedin:hover {
+  color: #0a66c2;
+}
+
+.link.github:hover {
+  color: #8b5cf6;
+}
+
+.link.cv:hover {
+  color: #7a6849;
+}
+
+.link.email:hover {
+  color: #4f6f88;
+}
+
+.link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.link svg.iconLg {
+  width: 18px;
+  height: 18px;
+}
