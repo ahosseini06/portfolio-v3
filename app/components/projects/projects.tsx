@@ -19,14 +19,21 @@ const Projects = () => {
           className={styles.cardLink}
         >
           <div className={styles.card}>
-            <div className={styles.imageWrapper}>
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                sizes="200px"
-                className={styles.image}
-              />
+            <div className={styles.thumbCluster}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="200px"
+                  className={styles.image}
+                />
+              </div>
+              <span className={styles.viewHint} aria-hidden>
+                <span className={styles.viewHintLine}>View</span>
+                <span className={styles.viewHintLine}>project</span>
+                <span className={styles.viewHintLine}>→</span>
+              </span>
             </div>
             <div className={styles.info}>
               <h3 className={styles.title}>

@@ -28,7 +28,54 @@
 .cardLink:hover .card,
 .cardLink:focus-visible .card {
   background-color: color-mix(in srgb, var(--secondary) 12%, transparent);
-  box-shadow: 0 12px 40px -18px color-mix(in srgb, var(--primary) 25%, transparent);
+  box-shadow: 0 6px 20px -10px color-mix(in srgb, var(--primary) 12%, transparent);
+}
+
+.thumbCluster {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.viewHint {
+  position: absolute;
+  left: calc(100% + 0.5rem);
+  top: 0.05rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.05rem;
+  font-size: 0.625rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  line-height: 1.15;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-6px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0.3s;
+}
+
+.viewHintLine {
+  display: block;
+}
+
+.cardLink:hover .viewHint,
+.cardLink:focus-visible .viewHint {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s;
 }
 
 .imageWrapper {
@@ -42,7 +89,7 @@
 
 .cardLink:hover .imageWrapper,
 .cardLink:focus-visible .imageWrapper {
-  box-shadow: 0 4px 14px -4px color-mix(in srgb, var(--primary) 35%, transparent);
+  box-shadow: 0 2px 10px -4px color-mix(in srgb, var(--primary) 18%, transparent);
 }
 
 .imageWrapper::after {
@@ -67,7 +114,7 @@
 
 .cardLink:hover .image,
 .cardLink:focus-visible .image {
-  transform: scale(1.07);
+  transform: scale(1.04);
 }
 
 .info {
@@ -91,7 +138,7 @@
 
 .cardLink:hover .title,
 .cardLink:focus-visible .title {
-  letter-spacing: 0.02em;
+  letter-spacing: 0.008em;
 }
 
 .tagline {
@@ -112,6 +159,7 @@
   .image,
   .imageWrapper,
   .imageWrapper::after,
+  .viewHint,
   .title {
     transition: none;
   }
@@ -124,5 +172,10 @@
   .cardLink:hover .title,
   .cardLink:focus-visible .title {
     letter-spacing: normal;
+  }
+
+  .cardLink:hover .viewHint,
+  .cardLink:focus-visible .viewHint {
+    transform: none;
   }
 }
