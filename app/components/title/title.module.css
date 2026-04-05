@@ -1,11 +1,14 @@
-.container{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
+.title__container {
+  width: 100%;
+}
 
 .title {
   display: flex;
@@ -13,6 +16,11 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 0;
+  min-height: 5rem;
+}
+
+.titleSpaced {
   gap: 1rem;
 }
 
@@ -21,14 +29,55 @@
   font-weight: 200;
   white-space: nowrap;
   letter-spacing: -0.04em;
+  animation: nameReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.dividerWrap {
+  width: 0;
+  min-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  transition: width 0.2s ease, min-width 0.2s ease, opacity 0.25s ease;
+}
+
+.dividerWrapVisible {
+  width: 1px;
+  min-width: 1px;
+  opacity: 1;
 }
 
 .divider {
-  display: block;
-  width: 1px;
-  align-self: stretch;
+  width: 100%;
+  flex: 1;
+  min-height: 2.5rem;
   margin: 0.8rem 0;
   background-color: var(--border);
+  transform-origin: bottom center;
+  transform: scaleY(0);
+}
+
+.dividerDrawing {
+  animation: drawDividerUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.descWrap {
+  flex: 0 1 auto;
+  max-width: 0;
+  min-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-width 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.5s ease 0.08s;
+}
+
+.descWrapOpen {
+  max-width: min(100%, 22rem);
+  opacity: 1;
 }
 
 .desc {
@@ -36,5 +85,61 @@
   font-weight: 100;
   color: var(--secondary);
   line-height: 1.5;
-  flex: 1;
+  transform: translateX(-14px);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.descWrapOpen .desc {
+  transform: translateX(0);
+}
+
+@keyframes nameReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawDividerUp {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .name {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .divider {
+    transform: scaleY(1);
+  }
+
+  .dividerDrawing {
+    animation: none;
+  }
+
+  .descWrap {
+    transition: none;
+    max-width: min(100%, 22rem);
+    opacity: 1;
+  }
+
+  .desc {
+    transform: none;
+    transition: none;
+  }
+
+  .dividerWrap {
+    transition: none;
+    width: 1px;
+    min-width: 1px;
+    opacity: 1;
+  }
 }

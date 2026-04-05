@@ -5,9 +5,7 @@ import styles from "./projects.module.css";
 import projectsData from "@/public/data/projects.json";
 import { projectSlug, type Project } from "@/lib/projects";
 
-const featuredProjects = (projectsData as Project[]).filter(
-  (p) => p.featured
-);
+const featuredProjects = (projectsData as Project[]).filter((p) => p.featured);
 
 const Projects = () => {
   return (
