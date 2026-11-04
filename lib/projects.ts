@@ -1,19 +1,19 @@
 import projectsData from "@/public/data/projects.json";
 
-export type Project = (typeof projectsData)[number];
+export type Project = {
+  title: string;
+  tagline: string;
+  where?: string;
+  /** Square icon in public/, e.g. "/logos/motif.svg". Leave "" for none. */
+  logo?: string;
+  featured?: boolean;
+  projectLink?: string;
+};
 
-export const projects = projectsData as Project[];
+export const projects: Project[] = projectsData;
 
-/** URL segment derived from project title (stable, lowercase, hyphenated). */
-export function projectSlug(title: string): string {
-  return title
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
-export function getProjectBySlug(slug: string): Project | undefined {
-  const normalized = slug.trim().toLowerCase();
-  return projects.find((p) => projectSlug(p.title) === normalized);
+/** Absolute URL for a project's link ("playsyncsports.com" → "https://playsyncsports.com"). */
+export function projectHref(link?: string): string | undefined {
+  if (!link?.trim()) return undefined;
+  return /^[a-z]+:\/\//i.test(link) ? link : `https://${link}`;
 }

@@ -1,21 +1,210 @@
-@import "tailwindcss";
-
-:root {
-  --background: #fafafa;
-  --primary: #000000;
-  --secondary: #7D7D7D;
-  --border: #7d7d7d7a;
-  --border-secondary: #7d7d7d4d;
+/* Minimal reset (replaces Tailwind's preflight; the site uses no utility classes). */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-roboto-flex);
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+:root {
+  --bg: #fcfcfb;
+  --text: #191918;
+  --muted: #71706c;
+  --faint: #d9d8d4;
+  --hover-bg: #f2f1ee;
+  --rule: #ebeae6;
+}
+
+html {
+  background: var(--bg);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-roboto-flex), Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--text);
+  color: var(--bg);
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 5rem;
+}
+
+/* ---------- Header ---------- */
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+}
+
+/* ---------- Sections ---------- */
+
+section {
+  margin-top: 3rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.625rem;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* ---------- Links ---------- */
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--faint);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------- Tables (work, side quests) ---------- */
+
+.tableWrap {
+  margin: 0 -0.625rem;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.table th,
+.table td {
+  padding: 0.625rem;
+  text-align: left;
+  vertical-align: baseline;
+}
+
+/* Header: small, quiet labels. */
+.table th {
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted);
+  border-bottom: 1px solid var(--faint);
+}
+
+/* Body: secondary columns muted, a hairline between rows. */
+.table td {
+  vertical-align: middle;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* First column is the row's name: full colour, a touch heavier, same width
+   in every table so the columns line up across sections. */
+.table th:first-child,
+.table td:first-child {
+  width: 10rem;
+}
+
+.table td:first-child {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Project name with its icon, on one line. The underline sits on the name only. */
+.project {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+a.project {
+  text-decoration: none;
+}
+
+a.project .projectName {
+  text-decoration: underline;
+  text-decoration-color: var(--faint);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a.project:hover .projectName {
+  text-decoration-color: currentColor;
+}
+
+.project .logo {
+  display: block;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: var(--hover-bg);
+}
+
+.table .dateCol {
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 30rem) {
+  .table th,
+  .table td {
+    white-space: nowrap;
+  }
 }

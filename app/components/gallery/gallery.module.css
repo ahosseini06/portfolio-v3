@@ -1,0 +1,50 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.375rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.photo {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 6px;
+  background: var(--hover-bg);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.toggle {
+  all: unset;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  font-size: 0.9375rem;
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: var(--faint);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.toggle:hover {
+  color: var(--text);
+  text-decoration-color: currentColor;
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
