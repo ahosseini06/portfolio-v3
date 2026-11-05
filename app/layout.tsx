@@ -9,7 +9,7 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: "Ali Hosseini",
-  description: "Ali Hosseini — projects, experience and photos.",
+  description: "Ali Hosseini: work and side quests.",
 };
 
 export default function RootLayout({

@@ -1,10 +1,50 @@
 import Image from "next/image";
-import Gallery from "./components/gallery/gallery";
-import { person, contactLinks, roles } from "@/lib/site";
+import { person, blurb, contactLinks, roles } from "@/lib/site";
 import { projects, projectHref } from "@/lib/projects";
 
 const featured = projects.filter((p) => p.featured);
 const liveLinks = contactLinks.filter((l) => l.href);
+
+/** A name with its icon, linking out when there's a link. */
+function Named({
+  name,
+  link,
+  logo,
+}: {
+  name: string;
+  link?: string;
+  logo?: string;
+}) {
+  const href = projectHref(link);
+  const icon = logo ? (
+    <Image
+      src={logo}
+      alt=""
+      width={18}
+      height={18}
+      unoptimized
+      className="logo"
+    />
+  ) : (
+    <span className="logo" aria-hidden="true" />
+  );
+  return href ? (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project"
+    >
+      {icon}
+      <span className="projectName">{name}</span>
+    </a>
+  ) : (
+    <span className="project">
+      {icon}
+      <span>{name}</span>
+    </span>
+  );
+}
 
 export default function Home() {
   return (
@@ -25,6 +65,13 @@ export default function Home() {
             </a>
           ))}
         </nav>
+        {blurb.length > 0 && (
+          <div className="blurb">
+            {blurb.map((para) => (
+              <p key={para}>{para}</p>
+            ))}
+          </div>
+        )}
       </header>
 
       <section>
@@ -44,10 +91,12 @@ export default function Home() {
             <tbody>
               {roles.map((r) => (
                 <tr key={r.company}>
-                  <td>{r.company}</td>
-                  <td>{r.backedBy}</td>
-                  <td>{r.role}</td>
-                  <td className="dateCol">{r.date}</td>
+                  <td className="cName">
+                    <Named name={r.company} link={r.link} logo={r.logo} />
+                  </td>
+                  <td className="cAside">{r.backedBy}</td>
+                  <td className="cSub">{r.role}</td>
+                  <td className="cMeta dateCol">{r.date}</td>
                 </tr>
               ))}
             </tbody>
@@ -58,52 +107,27 @@ export default function Home() {
       <section>
         <h2>Side Quests</h2>
         <div className="tableWrap">
-          <table className="table">
+          <table className="table quests">
             <thead>
               <tr>
                 <th scope="col">Name</th>
                 <th scope="col">What</th>
-                <th scope="col">Where</th>
+                <th scope="col">Status</th>
               </tr>
             </thead>
             <tbody>
-              {featured.map((p) => {
-                const href = projectHref(p.projectLink);
-                return (
-                  <tr key={p.title}>
-                    <td>
-                      {(() => {
-                        const icon = p.logo ? (
-                          <Image src={p.logo} alt="" width={18} height={18} unoptimized className="logo" />
-                        ) : (
-                          <span className="logo" aria-hidden="true" />
-                        );
-                        return href ? (
-                          <a href={href} target="_blank" rel="noopener noreferrer" className="project">
-                            {icon}
-                            <span className="projectName">{p.title}</span>
-                          </a>
-                        ) : (
-                          <span className="project">
-                            {icon}
-                            <span>{p.title}</span>
-                          </span>
-                        );
-                      })()}
-                    </td>
-                    <td>{p.tagline}</td>
-                    <td>{p.where}</td>
-                  </tr>
-                );
-              })}
+              {featured.map((p) => (
+                <tr key={p.title}>
+                  <td className="cName">
+                    <Named name={p.title} link={p.projectLink} logo={p.logo} />
+                  </td>
+                  <td className="cSub cWide">{p.tagline}</td>
+                  <td className="cMeta">{p.status}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
-      </section>
-
-      <section>
-        <h2>Photos</h2>
-        <Gallery />
       </section>
     </main>
   );

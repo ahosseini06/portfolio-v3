@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1e120c"/><path d="M32 8v36" stroke="#efe6d3" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="47" r="9" fill="none" stroke="#3fb8a6" stroke-width="3"/><path d="M24 20h16M24 28h16" stroke="#e2a33b" stroke-width="3" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Nava</title>
+  <!-- "Setar, diagonal" on a pomegranate tile: the setar laid corner to corner, bowl low left, neck leaving the frame -->
+  <defs><clipPath id="tile"><rect width="64" height="64" rx="14"/></clipPath></defs>
+  <g clip-path="url(#tile)">
+    <rect width="64" height="64" fill="#c8322f"/>
+    <g transform="rotate(-38 32 32)">
+      <rect x="29.5" y="-24" width="5" height="54" fill="#f6efe4"/>
+      <path d="M32 26C25 34 18 42 18 50C18 57 24 60 32 60C40 60 46 57 46 50C46 42 39 34 32 26Z" fill="#f6efe4"/>
+      <circle cx="32" cy="48" r="4" fill="#0d0d0d"/>
+    </g>
+  </g>
+</svg>

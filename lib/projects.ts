@@ -3,7 +3,8 @@ import projectsData from "@/public/data/projects.json";
 export type Project = {
   title: string;
   tagline: string;
-  where?: string;
+  /** Where the project is at now, e.g. "1k users", "Acquired". */
+  status?: string;
   /** Square icon in public/, e.g. "/logos/motif.svg". Leave "" for none. */
   logo?: string;
   featured?: boolean;

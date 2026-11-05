@@ -1,8 +1,22 @@
 [
+  {
+    "title": "SilentFlow",
+    "tagline": "Silent lip-reading dictation for Mac",
+    "status": "Open Sourced",
+    "logo": "/logos/silentflow.svg",
+    "description": "A native macOS app that reads your lips through the webcam and types what you mouth, fully on-device.",
+    "skills": ["Swift", "macOS", "Computer Vision", "Machine Learning", "Fine Tuning", "LLMs", "MLX"],
+    "featured": true,
+    "searchTerms": ["lip reading", "lipreading", "dictation", "silent", "speech", "visual speech recognition", "macOS", "on-device", "privacy", "accessibility"],
+    "collaborators": [
+        { "name": "Ali Hosseini (me)", "jobTitle": "Engineer" }
+    ],
+    "projectLink": "https://silentflow.alihosseini.ca"
+  },
     {
         "title": "Motif",
-        "tagline": "Cinema Grade AI Footage Sorter",
-        "where": "",
+        "tagline": "Cinema grade AI footage search",
+        "status": "Open Sourced - 1000 Downloads",
         "logo": "/logos/motif.svg",
         "description": "A platform for sorting and searching through footage by content and camera movement",
         "skills": ["Custom Model", "Machine Learning","CLIP","LLMs", "Fine Tuning", "NextJS", "NodeJS"],
@@ -21,8 +35,8 @@
     },
    {
         "title": "Glyph",
-        "tagline": "Semantic Font Search",
-        "where": "",
+        "tagline": "Semantic font search for designers",
+        "status": "Free for use",
         "logo": "/logos/glyph.svg",
         "description": "A platform for searching for fonts by their semantic meaning.",
         "skills": ["Custom Model", "Machine Learning","CLIP","LLMs", "Fine Tuning", "NextJS", "NodeJS", "Supabase", "SQL", "Full-Stack", "Product Design", "Web Sockets"],
@@ -41,8 +55,8 @@
     },
   {
     "title": "PlaySync",
-    "tagline": "League Management",
-    "where": "",
+    "tagline": "Sport league management system",
+    "status": "Acquired",
     "logo": "/logos/playsync.svg",
     "description": "A platform for managing leagues, matches, and player statistics.",
     "skills": ["ReactJS", "NodeJS", "Strapi", "SQL", "Full-Stack", "Product Design", "Web Sockets"],
@@ -60,8 +74,8 @@
     "projectLink": "playsyncsports.com"
   },{
     "title": "Nava",
-    "tagline": "Persian Modal Tuner",
-    "where": "",
+    "tagline": "Persian modal tuner",
+    "status": "Open Sourced - 3000 Daily Sessions",
     "logo": "/logos/nava.svg",
     "description": "A mobile app for tuning Persian musical instruments with a modern UI.",
     "skills": ["Expo", "React Native", "UX/UI design", "NodeJS", "End2End", "Full-Stack", "SQL"],
@@ -73,33 +87,7 @@
     "collaborators": [
         { "name": "Ali Hosseini (me)", "jobTitle": "Frontend Engineer" },
         { "name": "Danial Khatoonabadi", "jobTitle": "Backend Developer" }
-    ]
-  },
-  {
-    "title": "Golden Goal Construction LTD",
-    "tagline": "",
-    "where": "",
-    "description": "Corporate website for a construction company, featuring portfolio and contact forms.",
-    "skills": ["Website Development", "NextJS", "TypeScript", "NodeJS", "Web Design"],
-    "image": "/projectThumbnails/GGC.png",
-    "featured": false,
-    "searchTerms": [
-      "construction", "builder", "builders", "company", "firm", "website", "web site", "web development", "webdev", "portfolio", "contact", "contact form", "NextJS", "next.js", "next js", "TypeScript", "typescript", "ts", "Node", "NodeJS", "node.js", "web design", "design", "corporate", "landing page", "landing", "services", "projects", "architecture", "architect", "business", "contractor", "contractors", "engineering", "engineer", "property", "real estate", "gallery", "showcase", "about us", "about", "team"
     ],
-    "collaborators": []
-  },
-  {
-    "title": "S.E.E.",
-    "tagline": "Tutoring Manager",
-    "where": "",
-    "description": "A platform for managing tutoring sessions, schedules, and student progress.",
-    "skills": ["NextJS", "TypeScript", "NodeJS", "Drizzle", "Server Side Functions", "Product Design"],
-    "image": "/projectThumbnails/SEE.png",
-    "featured": false,
-    "searchTerms": [
-      "tutoring", "tutor", "tutors", "education", "manager", "management", "sessions", "session", "schedule", "scheduling", "student", "students", "progress", "NextJS", "next.js", "next js", "TypeScript", "typescript", "ts", "Node", "NodeJS", "node.js", "Drizzle", "server side", "server-side", "server functions", "product design", "design", "learning", "teacher", "teachers", "class", "classes", "dashboard", "admin", "lesson", "lessons", "academic", "academics", "school", "schools", "course", "courses", "education tech", "edtech"
-    ],
-    "collaborators": []
+    "projectLink": "https://nava.alihosseini.ca"
   }
-  
-] 
+]

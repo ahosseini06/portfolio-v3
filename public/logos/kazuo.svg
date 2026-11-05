@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <!-- Kazuo Corp. mark, redrawn as vectors from the raster logo. -->
+  <rect width="180" height="180" rx="40" fill="#1285ac"/>
+  <path d="M78 90L78 38.5M78 90L145.5 51M78 90L122.6 115.8M78 90L78 141.5M78 90L33.4 115.8M78 90L33.4 64.2" stroke="#fff" stroke-width="13.5" stroke-linecap="round"/>
+  <g fill="#fff">
+    <circle cx="78" cy="38.5" r="14"/>
+    <circle cx="145.5" cy="51" r="14"/>
+    <circle cx="122.6" cy="115.8" r="14"/>
+    <circle cx="78" cy="141.5" r="14"/>
+    <circle cx="33.4" cy="115.8" r="14"/>
+    <circle cx="33.4" cy="64.2" r="14"/>
+  </g>
+</svg>
