@@ -219,6 +219,15 @@ a.project:hover .projectName {
   filter: none;
 }
 
+/* Touch screens have no hover, so the logos are always in colour there. */
+@media (hover: none) {
+  .table .logo,
+  .table img.logo[src$="/cedar.svg"],
+  .quests .logo {
+    filter: none;
+  }
+}
+
 /* Every icon gets an 18px square slot; marks that aren't square (Cedar's
    hexagon) fit inside it by height, so the names still line up. */
 .project .logo {
