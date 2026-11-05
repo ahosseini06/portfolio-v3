@@ -46,6 +46,20 @@ function Named({
   );
 }
 
+/**
+ * A status like "Open Sourced - 1000 Downloads". Inline with its dash on
+ * wide screens; on phones each part gets its own line and the dash drops.
+ */
+function Status({ text }: { text?: string }) {
+  const parts = (text ?? "").split(/\s+[-–—]\s+/).filter(Boolean);
+  return parts.map((part, i) => (
+    <span key={i} className="statusPart">
+      {i > 0 && <span className="statusDash"> - </span>}
+      {part}
+    </span>
+  ));
+}
+
 export default function Home() {
   return (
     <main>
@@ -94,7 +108,12 @@ export default function Home() {
                   <td className="cName">
                     <Named name={r.company} link={r.link} logo={r.logo} />
                   </td>
-                  <td className="cAside">{r.backedBy}</td>
+                  <td className="cAside">
+                    {r.backedBy && (
+                      <span className="mobileLabel">Backed by: </span>
+                    )}
+                    {r.backedBy}
+                  </td>
                   <td className="cSub">{r.role}</td>
                   <td className="cMeta dateCol">{r.date}</td>
                 </tr>
@@ -121,8 +140,10 @@ export default function Home() {
                   <td className="cName">
                     <Named name={p.title} link={p.projectLink} logo={p.logo} />
                   </td>
-                  <td className="cSub cWide">{p.tagline}</td>
-                  <td className="cMeta">{p.status}</td>
+                  <td className="cSub">{p.tagline}</td>
+                  <td className="cMeta">
+                    <Status text={p.status} />
+                  </td>
                 </tr>
               ))}
             </tbody>

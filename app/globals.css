@@ -240,6 +240,11 @@ a.project:hover .projectName {
   white-space: nowrap;
 }
 
+/* Phone-only bits: hidden on wide screens, shown in the stacked layout. */
+.mobileLabel {
+  display: none;
+}
+
 /* ---------- Narrow screens ----------
    The tables become short two-line entries, so nothing scrolls off-screen:
      Name            Date / Status
@@ -311,7 +316,33 @@ a.project:hover .projectName {
   .table .cMeta { grid-area: meta; text-align: right; font-size: 0.8125rem; align-self: center; }
   .table .cSub { grid-area: sub; }
   .table .cAside { grid-area: aside; text-align: right; font-size: 0.8125rem; align-self: center; }
-  .table .cWide { grid-column: 1 / -1; }
+
+  .mobileLabel {
+    display: inline;
+  }
+
+  /* Side Quests: name over description on the left, status on the right.
+     A two-part status ("Open Sourced - 1000 Downloads") drops the dash and
+     takes both lines, each lined up with the line beside it, so every row
+     stays the same height. */
+  .quests .cMeta {
+    grid-row: 1 / span 2;
+    align-self: start;
+  }
+
+  .table .statusPart {
+    display: block;
+    line-height: 1.5rem; /* matches the name line */
+  }
+
+  .table .statusPart + .statusPart {
+    margin-top: 0.125rem; /* the row gap */
+    line-height: 1.4rem; /* matches the description line */
+  }
+
+  .table .statusDash {
+    display: none;
+  }
 
   /* Second line sits under the name, past the icon (18px + 8px gap). */
   .table .cSub {
