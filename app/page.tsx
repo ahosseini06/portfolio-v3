@@ -1,4 +1,5 @@
 import Image from "next/image";
+import banner from "@/public/banner.jpg";
 import { person, blurb, contactLinks, roles } from "@/lib/site";
 import { projects, projectHref } from "@/lib/projects";
 
@@ -62,23 +63,37 @@ function Status({ text }: { text?: string }) {
 
 export default function Home() {
   return (
-    <main>
-      <header>
-        <h1>{person.name}</h1>
-        <nav className="links" aria-label="Contact">
-          {liveLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              {...(link.href?.startsWith("http") && {
-                target: "_blank",
-                rel: "noopener noreferrer",
-              })}
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+    <>
+      <header className="banner">
+        <Image
+          src={banner}
+          alt="Ali Hosseini speaking on stage"
+          // Rendered width is the banner height (see .banner --bh) × the image aspect
+          // (7417/600 ≈ 12.36), not the viewport width.
+          sizes="(max-width: 640px) 2180px, (max-width: 1016px) 1980px, (max-width: 1346px) 195vw, 2620px"
+          loading="eager"
+          fetchPriority="high"
+          placeholder="blur"
+        />
+        <div className="bannerText">
+          <h1>{person.name}</h1>
+          <nav className="links" aria-label="Contact">
+            {liveLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                {...(link.href?.startsWith("http") && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </header>
+      <main>
         {blurb.length > 0 && (
           <div className="blurb">
             {blurb.map((para) => (
@@ -86,70 +101,74 @@ export default function Home() {
             ))}
           </div>
         )}
-      </header>
 
-      <section>
-        <h2>Work</h2>
-        <div className="tableWrap">
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col">Company</th>
-                <th scope="col">Backed by</th>
-                <th scope="col">Role</th>
-                <th scope="col" className="dateCol">
-                  Date
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {roles.map((r) => (
-                <tr key={r.company}>
-                  <td className="cName">
-                    <Named name={r.company} link={r.link} logo={r.logo} />
-                  </td>
-                  <td className="cAside">
-                    {r.backedBy && (
-                      <span className="mobileLabel">Backed by: </span>
-                    )}
-                    {r.backedBy}
-                  </td>
-                  <td className="cSub">{r.role}</td>
-                  <td className="cMeta dateCol">{r.date}</td>
+        <section>
+          <h2>Work</h2>
+          <div className="tableWrap">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th scope="col">Company</th>
+                  <th scope="col">Backed by</th>
+                  <th scope="col">Role</th>
+                  <th scope="col" className="dateCol">
+                    Date
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+              </thead>
+              <tbody>
+                {roles.map((r) => (
+                  <tr key={r.company}>
+                    <td className="cName">
+                      <Named name={r.company} link={r.link} logo={r.logo} />
+                    </td>
+                    <td className="cAside">
+                      {r.backedBy && (
+                        <span className="mobileLabel">Backed by: </span>
+                      )}
+                      {r.backedBy}
+                    </td>
+                    <td className="cSub">{r.role}</td>
+                    <td className="cMeta dateCol">{r.date}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-      <section>
-        <h2>Side Quests</h2>
-        <div className="tableWrap">
-          <table className="table quests">
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">What</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {featured.map((p) => (
-                <tr key={p.title}>
-                  <td className="cName">
-                    <Named name={p.title} link={p.projectLink} logo={p.logo} />
-                  </td>
-                  <td className="cSub">{p.tagline}</td>
-                  <td className="cMeta">
-                    <Status text={p.status} />
-                  </td>
+        <section>
+          <h2>Side Quests</h2>
+          <div className="tableWrap">
+            <table className="table quests">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">What</th>
+                  <th scope="col">Status</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-    </main>
+              </thead>
+              <tbody>
+                {featured.map((p) => (
+                  <tr key={p.title}>
+                    <td className="cName">
+                      <Named
+                        name={p.title}
+                        link={p.projectLink}
+                        logo={p.logo}
+                      />
+                    </td>
+                    <td className="cSub">{p.tagline}</td>
+                    <td className="cMeta">
+                      <Status text={p.status} />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

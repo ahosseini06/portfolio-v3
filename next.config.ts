@@ -10,6 +10,11 @@ const lanAddresses = Object.values(networkInterfaces())
 
 const nextConfig: NextConfig = {
   allowedDevOrigins: lanAddresses,
+  images: {
+    // Defaults plus two wide sizes: the banner photo is sized by height, so
+    // on phones and retina screens it renders 5–7k pixels wide.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840, 5120, 7417],
+  },
   turbopack: {
     rules: {
       // Import .txt files (e.g. content/blurb.txt) as strings, so edits hot-reload.
